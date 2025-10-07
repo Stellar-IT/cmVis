@@ -8,10 +8,7 @@ FetchContent_Declare(
     URL_HASH SHA256=17e02b4cddc2fa348e5dbdbb582c59a3486fa2b2433e70a0c3bacb871334fd55
 )
 
-FetchContent_GetProperties(cli11)
-if(NOT cli11_POPULATED)
-    FetchContent_Populate(cli11)
-endif()
+FetchContent_MakeAvailable(cli11)
 
 if(NOT EXISTS "${EXTERNAL_INSTALL_DIR}/include/CLI/CLI.hpp")
     file(MAKE_DIRECTORY ${CLI11_BINARY_DIR})

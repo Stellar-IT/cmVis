@@ -1,0 +1,25 @@
+# Input
+PROJECT_NAME           = "@PROJECT_NAME@"
+PROJECT_BRIEF          = "Visualize and explore your CMake targets, dependencies, and build structure."
+OUTPUT_DIRECTORY       = "@CMAKE_CURRENT_BINARY_DIR@/docs"
+INPUT                  = "@CMAKE_SOURCE_DIR@/src"
+RECURSIVE              = YES
+
+# Output
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+# Graphviz integration
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_MULTI_TARGETS      = YES
+DOT_CLEANUP            = YES
+
+# Misc
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = YES
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = "@CMAKE_SOURCE_DIR@"

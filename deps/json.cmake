@@ -8,10 +8,7 @@ FetchContent_Declare(
     URL_HASH SHA256=4b92eb0c06d10683f7447ce9406cb97cd4b453be18d7279320f7b2f025c10187
 )
 
-FetchContent_GetProperties(json)
-if(NOT json_POPULATED)
-    FetchContent_Populate(json)
-endif()
+FetchContent_MakeAvailable(json)
 
 if(NOT EXISTS "${EXTERNAL_INSTALL_DIR}/include/nlohmann/json.hpp")
     file(MAKE_DIRECTORY ${JSON_BINARY_DIR})

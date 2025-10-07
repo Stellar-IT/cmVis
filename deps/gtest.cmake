@@ -8,10 +8,7 @@ FetchContent_Declare(
     URL_HASH SHA256=65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c
 )
 
-FetchContent_GetProperties(gtest)
-if(NOT gtest_POPULATED)
-    FetchContent_Populate(gtest)
-endif()
+FetchContent_MakeAvailable(gtest)
 
 if(NOT EXISTS "${EXTERNAL_INSTALL_DIR}/lib/libgtest.a")
     file(MAKE_DIRECTORY ${GTEST_BINARY_DIR})
